@@ -1,9 +1,9 @@
 var CONFIG = {
     //Facebook API token
-    accessToken: "EAAJHe9RaZCPMBACCANGdZAWhDtFaGlnsPrgHcEUMnqzQIvgdZBlT63jJN3XhMNmskxLqINRaA6FQGRcjvn0VzYZAkfhjvNZCAvFqbxgMGpQTdMeqVrLU1q54SrMtJfrodW3Ik9A2CyPujsYFQQrukZB2sjpZCF4bDyZB2Alk8cwP0QZDZD",
+    accessToken: "EAAaGZAKuM5vQBAP4xfUiWabcI8CBscF1zV8DKfj2m9aNBBn32DAAKfalirH3Ue7u5Kz8hj3qfvY8uVAlC6B0z65WBZCi6rSWyvvuZA1U3CZBZAdfbBt7vZB4fdLxyj2xkNbnjBxoFsZBysWZBZABt8pvWJw3XdQ4zZBZAcZCZBVTvoZA7YmwZDZD",
 
     //WIT NPL engine API token
-    witToken: "PJX7EGBJULGZ237OJZQ3MMAHNIX4S4UV",
+    witToken: "",
 
     port: 8080,
     ssl: {

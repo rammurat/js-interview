@@ -1,39 +1,67 @@
 {
 	"questions": [{
-		"response": "Hi <user>, This is TMS Bot. When do you wanna book your cab? Let me help.",
+		"question": "Hi <user>, Welcome to ChatBot Validator.",
 		"key": "welcome_greeting",
 		"tType": "text",
-		"options": []
+		"answers": [],
+		"options" : []
+	},{
+		"question": "Kindly select technology you want to start with?",
+		"key": "select_technology",
+		"tType": "optionList",
+		"answers": [],
+		"options" : [{
+			"id": "javascript",
+			"name": "Java Script"
+		}, {
+			"id": "react",
+			"name": "React JS"
+		}, {
+			"id": "angular2",
+			"name": "Angular 2 JS"
+		}]
 	}, {
-		"response": "Let me know, When do you wanna book cab? ",
-		"key": "book_cab",
+		"question": "When a user views a page containing a JavaScript program, which machine actually executes the script?",
+		"key": "machine_execution",
 		"tType": "text",
-		"options": []
+		"answers": ["The User's machine running a Web browser","The Web server","A central machine deep within Netscape's corporate offices"],
+		"options" : []
 	},{
-		"response": "Select you Date.",
-		"key": "select_date",
+		"question": "Which of the following can't be done with client-side JavaScript?",
+		"key": "client_side",
 		"tType": "text",
-		"options": []
+		"answers": ["Validating a form","Sending a form's contents by email","Storing the form's contents to a database file on the server"],
+		"options" : []
 	},{
-		"response": "Select your Timings.",
+		"question": "How does JavaScript store dates in a date object?",
 		"key": "select_timings",
 		"tType": "text",
-		"options": []
+		"answers": ["The number of milliseconds since January 1st, 1970","The number of days since January 1st, 1900","The number of seconds since Netscape's public stock offering."],
+		"options" : []
 	},{
-		"response": "Justification?",
+		"question": "Which of the following attribute can hold the JavaScript version?",
 		"key": "justification",
 		"tType": "text",
-		"options": []
+		"answers": ["LANGUAGE","SCRIPT","VERSION"],
+		"options" : []
 	},{
-		"response": "Is it billable?",
+		"question": "What is the correct JavaScript syntax to write `Hello World`?",
 		"key": "isBillable",
 		"tType": "text",
-		"options": []
+		"answers": ["System.out.println(`Hello World`)","println (`Hello World`)","document.write(`Hello World`)","response.write(`Hello World`)"],
+		"options" : []
+	},{
+		"question": "Result Summary?",
+		"key": "summary",
+		"tType": "text",
+		"answers": [],
+		"options" : []
 	}, {
 		"key": "thanks_greeting",
-		"response": "Bye. See you again :)",
+		"question": "Bye. See you again :)",
 		"tType": "text",
-		"options": []
+		"answers": [],
+		"options" : []
 	}],
 	"chatData": []
 }

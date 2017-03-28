@@ -2,9 +2,7 @@ var service = require('./bot-service');
 var _ = require('underscore');
 var CONFIG = require('./bot-config');
 var WIT = require('wit-js');
-var client = new WIT.Client({
-    apiToken: CONFIG.witToken
-});
+
 
 module.exports = {
     autoReply: function(text, userObj, responseList,text) {
@@ -21,32 +19,19 @@ module.exports = {
 
                 //get message
                 var text = event.message.text;
-               
-                //Send message to WIT                
-                client.message(text, {})
-                    .then(function(witKey) {
 
-                        //Get response
-                        var _key = witKey.entities.intent ? witKey.entities.intent[0].value : '',
-                            data = _.findWhere(responseList, {
-                                key: _key
-                            }),
-                            intentConfidence = witKey.entities.intent ? witKey.entities.intent[0].confidence : 0;
+                data = _.findWhere(responseList, {
+                    key: _key
+                }),
+                           
+                //ask next question
+                _this.sendNextQuestion(responseList, userObj, _key,text);
 
-                        if (data && intentConfidence > 0.5) {
+            } else {
+                //send default messsage
+                service.sendPlainMessage(userObj.userId, CONFIG, CONFIG.defaultQueryMsg);
+            }
 
-                            //ask next question
-                            _this.sendNextQuestion(responseList, userObj, _key,text);
-
-                        } else {
-                            //send default messsage
-                            service.sendPlainMessage(userObj.userId, CONFIG, CONFIG.defaultQueryMsg);
-                        }
-                    })
-                    .catch(function(err) {
-                        console.log("WIT reponse fails", err);
-                    });
-                }
         }
         //Handle postbask reponse             
         else if (event.postback) {

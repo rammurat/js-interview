@@ -67,6 +67,8 @@ app.get('/webhook/', function(req, res) {
 //Handle post platform callback 
 app.post('/webhook/', function(req, res) {
 
+    
+
 
     //get events    
     messaging_events = req.body.entry[0].messaging;
