@@ -1,0 +1,39 @@
+{
+	"questions": [{
+		"response": "Hi <user>, This is TMS Bot. When do you wanna book your cab? Let me help.",
+		"key": "welcome_greeting",
+		"tType": "text",
+		"options": []
+	}, {
+		"response": "Let me know, When do you wanna book cab? ",
+		"key": "book_cab",
+		"tType": "text",
+		"options": []
+	},{
+		"response": "Select you Date.",
+		"key": "select_date",
+		"tType": "text",
+		"options": []
+	},{
+		"response": "Select your Timings.",
+		"key": "select_timings",
+		"tType": "text",
+		"options": []
+	},{
+		"response": "Justification?",
+		"key": "justification",
+		"tType": "text",
+		"options": []
+	},{
+		"response": "Is it billable?",
+		"key": "isBillable",
+		"tType": "text",
+		"options": []
+	}, {
+		"key": "thanks_greeting",
+		"response": "Bye. See you again :)",
+		"tType": "text",
+		"options": []
+	}],
+	"chatData": []
+}
